@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Related Projects</title>
+    <style type="text/css">
+    .img-polaroid{padding:4px;background-color: transparent;border:1px solid #ccc;border:1px solid rgba(0,0,0,0.2);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.1);-moz-box-shadow:0 1px 3px rgba(0,0,0,0.1);box-shadow:0 1px 3px rgba(0,0,0,0.1)}
+    .img-size{
+        width: 300px;
+        height: 150px;
+    }
+    </style>
+</head>
+<body style="font-family:Arial, Verdana;background-color:#fff;">
+    <!-- use jssor.slider.min.js instead for release -->
+    <!-- jssor.slider.min.js = (jssor.core.js + jssor.utils.js + jssor.slider.js) -->
+    <script type="text/javascript" src="../js/jssor.slider.min.js"></script>
+    
+
+    <script>
+        jssor_slider1_starter = function (containerId) {
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
+                $AutoPlayInterval: 3000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $PauseOnHover: 3,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, default value is 1
+
+                $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+                $SlideEasing: $JssorEasing$.$EaseLinear,          //[Optional] Specifies easing for right to left animation, default value is $JssorEasing$.$EaseOutQuad
+                $SlideDuration: 400,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+                $SlideWidth: 335,                                   //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+                $SlideHeight: 250,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+
+                $SlideSpacing: 0, 					                //[Optional] Space between each slide in pixels, default value is 0
+                $DisplayPieces: 7,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+                $ParkingPosition: 0,                              //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+                $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+                $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
+                $DragOrientation: 1                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+            };
+
+            var jssor_slider1 = new $JssorSlider$(containerId, options);
+
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+            function ScaleSlider() {
+                var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+                if (parentWidth)
+                    jssor_slider1.$SetScaleWidth(Math.min(parentWidth, 1170));
+                else
+                    $JssorUtils$.$Delay(ScaleSlider, 30);
+            }
+
+            ScaleSlider();
+            $JssorUtils$.$AddEvent(window, "load", ScaleSlider);
+
+
+            if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
+                $JssorUtils$.$OnWindowResize(window, ScaleSlider);
+            }
+
+            //if (navigator.userAgent.match(/(iPhone|iPod|iPad)/)) {
+            //    $JssorUtils$.$AddEvent(window, "orientationchange", ScaleSlider);
+            //}
+            //responsive code end
+        };
+    </script>
+    <!-- Jssor Slider Begin -->
+    <!-- You can move inline styles to css file or css block. -->
+    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 980px; height: 250px; overflow: hidden; " >
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block; background-color: #000; top: 0px; left: 0px;width: 100%; height:100%">
+            </div>
+            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 980px; height: 250px; overflow: hidden;">
+            <div><a href="update1.php" target="_blank"><img u="image" alt="" src="images/updates/blood.jpg" class="img-polaroid img-responsive img-size"/></a></div>
+			
+            <div><a href="update2.php" target="_blank"><img u="image" alt="android" src="images/updates/pc9.jpg" class="img-polaroid img-responsive img-size"/></a></div>
+			
+            <div><a href="abhyasvarg.php" target="_blank"><img u="image" alt="bitly" src="images/events/unnayan/abhyasvarg/2.jpg" class="img-polaroid img-responsive img-size"/></a></div>
+			
+            <div><a href="vivekanand_jayanti.php" target="_blank"><img u="image" alt="blogger" src="images/events/socio-cultural/vivekanand-jayanti/11.jpg" class="img-polaroid img-responsive img-size"/></a></div>
+			<!--
+            <div><a href="#" target="_blank"><img u="image" alt="dnn" src="../img/high4.jpg" class="img-polaroid img-responsive img-size"/></a></div>
+            <div><a href="#" target="_blank"><img u="image" alt="drupal" src="../img/logo/drupal.jpg" class="img-polaroid img-responsive img-size"/></a></div>
+            <div><a href="#" target="_blank"><img u="image" alt="ebay" src="../img/logo/ebay.jpg" class="img-polaroid img-responsive img-size"/></a></div>
+            <div><a href="#" target="_blank"><img u="image" alt="facebook" src="../img/logo/facebook.jpg" class="img-polaroid img-responsive img-size"/></a></div>
+            <div><a href="#" target="_blank"><img u="image" alt="google" src="../img/logo/google.jpg" class="img-polaroid img-responsive img-size"/></a></div>
+            <div><a href="#" target="_blank"><img u="image" alt="ibm" src="../img/logo/ibm.jpg" class="img-polaroid img-responsive img-size"/></a></div>
+            <div><a href="#" target="_blank"><img u="image" alt="ios" src="../img/logo/ios.jpg" class="img-polaroid img-responsive img-size"/></a></div>
+            <div><a href="#" target="_blank"><img u="image" alt="joomla" src="../img/logo/joomla.jpg" class="img-polaroid img-responsive img-size"/></a></div>
+            <div><a href="#" target="_blank"><img u="image" alt="linkedin" src="../img/logo/linkedin.jpg" class="img-polaroid img-responsive img-size"/></a></div>
+            <div><a href="#" target="_blank"><img u="image" alt="mac" src="../img/logo/mac.jpg" class="img-polaroid img-responsive img-size"/></a></div>
+            <div><a href="#" target="_blank"><img u="image" alt="magento" src="../img/logo/magento.jpg" /></a></div>
+            <div><a href="#" target="_blank"><img u="image" alt="pinterest" src="../img/logo/pinterest.jpg" /></a></div>
+            <div><a href="#" target="_blank"><img u="image" alt="samsung" src="../img/logo/samsung.jpg" /></a></div>
+            <div><a href="#" target="_blank"><img u="image" alt="twitter" src="../img/logo/twitter.jpg" /></a></div>
+            <div><a href="#" target="_blank"><img u="image" alt="windows" src="../img/logo/windows.jpg" /></a></div>
+            <div><a href="#" target="_blank"><img u="image" alt="wordpress" src="../img/logo/wordpress.jpg" /></a></div>
+            <div><a href="#" target="_blank"><img u="image" alt="youtube" src="../img/logo/youtube.jpg" /></a></div>  -->
+        </div>
+        
+        <!-- Trigger -->
+        <script>
+            jssor_slider1_starter('slider1_container');
+        </script>
+
+    </div>
+    <!-- Jssor Slider End -->
+</body>
+</html>
