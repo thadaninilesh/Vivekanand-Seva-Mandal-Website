@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Free jQuery Slider/Carousel/Slideshow
 --------------------------------------
 
@@ -119,3 +120,10 @@ Jssor slider is one of most scalable slider. It comes with 30+ (continuous growi
 - **ebay friendly, eligible for ebay store, ebay listing**
 
 - **blogger friendly, just copy/paste code snippet to publish blogger post**
+=======
+# Vivekanand-Seva-Mandal-Website
+Website for Vivekanand Seva Mandal using bootstrap
+
+This website was made inorder to change the existing webiste of the NGO and replace it with modern responsive designs. The technologies include bootstrap framework alongwith some customized css.
+The jquery library for designing the sliders.
+>>>>>>> origin/master
